@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>2013 Graduation Data Across American Universities</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src=
+  "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+      </script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center"  style="background-color:#9ed0a8;">
+        <h1>State of American Universities:</h1>
+        <h3>Graduation Rates, SAT Scores, and Tuition and Fees in 2013</h3>
+        <p>Use the interactive dashboard to explore the dataset</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <h4>Select a university:
+      <select id="selDataset" onchange="optionChanged(this.value)"></select>
+    </h4>
+    </div>
+
+    <div class="page-header">
+      <h2>Graduation Rates: 
+        <small> View a university's graduation rate for attaining a Bachelor's degree within 4 years, 5 years, and 6 years. </small>
+      </h2>
+      <div id="sample-metadata" class="panel-body"></div>
+    </div>
+
+    <div class="page-header">
+      <h2>SAT Scores: 
+        <small> View a university's SAT 25th and 75th percentile scores in critical reading, math, and writing. </small>
+      </h2>
+    </div>
+
+    <div id="bar2">
+    </div>
+
+
+
+    <div class="page-header">
+      <h2>Tuition and fees: 
+          <small> View a university's tuition and fees in 2010-2011, 2011-2012, 2012-2013, and 2013-2014.</small>
+      </h2>
+    </div>
+
+    <div id="line"></div>
+
+    <div class="page-header">
+      <h2> SAT Scores vs. Graduation Rate: 
+          <small> This scatter plot displays data about SAT critical reading and math scores (75th percentile) and graduation rates for attaining a Bachelor's degree in 4 years.</small>
+      </h2>
+    </div>
+
+    <div id="scatterplot1"></div>
+    <div id="scatterplot"></div> 
+    
+    <div class="page-header">
+        <Large> Source:</Large>
+        <a href="https://www.kaggle.com/code/devisangeetha/find-your-university-in-us-with-leaflet-viz/input">Kaggle Dataset</a> <br>
+        <Large> Data Analysts: Juhi, Hima, Lora, Kesha</Large>
+  </div>
+
+  </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./static/logic_dashboard.js"></script>
+
+</body>
+
+</html>
